@@ -1,0 +1,21 @@
+{
+    "id": "byheartlk/botble-genie-payment",
+    "name": "Genie Business Payment Gateway",
+    "namespace": "Botble\\GeniePayment\\",
+    "provider": "Botble\\GeniePayment\\Providers\\GeniePaymentServiceProvider",
+    "author": "ByHeartLK Technologies Team",
+    "url": "https://byheart.lk/plugins",
+    "version": "1.0.0",
+    "description": "Genie Business payment gateway integration for Sri Lankan merchants. Accept Visa, MasterCard, and Amex payments securely.",
+    "minimum_core_version": "6.6.4",
+    "require": [
+        "botble/payment"
+    ],
+    "extra": {
+        "botble": {
+            "providers": [
+                "Botble\\GeniePayment\\Providers\\GeniePaymentServiceProvider"
+            ]
+        }
+    }
+}

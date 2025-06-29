@@ -1,0 +1,465 @@
+/**
+ * Genie Business Payment Gateway - CSS Styles
+ * Professional styling for payment interface
+ */
+
+/* Payment Method Selection */
+.payment-methods .list-group-item {
+    border: 2px solid #e9ecef;
+    transition: all 0.3s ease;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.payment-methods .list-group-item:hover {
+    border-color: #ff6b35;
+    box-shadow: 0 2px 8px rgba(255, 107, 53, 0.1);
+}
+
+.payment-methods .list-group-item.active {
+    border-color: #ff6b35;
+    background-color: #fff9f7;
+}
+
+/* Genie Payment Method Specific */
+.payment-method-genie {
+    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+    color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 15px 0;
+}
+
+.payment-method-genie .method-logo {
+    height: 40px;
+    width: auto;
+    margin-right: 15px;
+}
+
+.payment-method-genie .method-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.payment-method-genie .method-description {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin: 5px 0 0 0;
+}
+
+/* Payment Information Panel */
+.genie-payment-info {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 15px;
+}
+
+.genie-payment-info h6 {
+    color: #495057;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Card Types Display */
+.card-types {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.card-types i {
+    font-size: 2.5rem !important;
+    transition: transform 0.2s ease;
+}
+
+.card-types i:hover {
+    transform: scale(1.1);
+}
+
+/* Security Features */
+.security-features {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.security-features small {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.security-features i {
+    width: 16px;
+    text-align: center;
+}
+
+/* Payment Status */
+.transaction-status {
+    background: white;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.status-badge {
+    font-size: 0.875rem;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.status-badge.badge-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.status-badge.badge-warning {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeaa7;
+}
+
+.status-badge.badge-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.status-badge.badge-info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+    border: 1px solid #bee5eb;
+}
+
+/* Payment Actions */
+.payment-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.payment-actions .btn {
+    border-radius: 6px;
+    font-weight: 500;
+    padding: 8px 16px;
+    transition: all 0.2s ease;
+}
+
+.payment-actions .btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Loading States */
+.btn-loading {
+    position: relative;
+    pointer-events: none;
+}
+
+.btn-loading .fa-spinner {
+    margin-right: 8px;
+}
+
+/* Payment Messages */
+.payment-message-container {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1050;
+    width: 90%;
+    max-width: 500px;
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateX(-50%) translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+    }
+}
+
+.payment-message-container .alert {
+    margin: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border: none;
+    border-radius: 8px;
+}
+
+/* Currency Display */
+.currency-amount {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.currency-amount.large {
+    font-size: 1.5rem;
+}
+
+/* Payment Form Validation */
+.form-group.has-error .form-control,
+.form-control.is-invalid {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+.form-group.has-error .form-control:focus,
+.form-control.is-invalid:focus {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+.invalid-feedback {
+    display: block;
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 5px;
+}
+
+/* Sandbox Mode Indicator */
+.sandbox-mode-indicator {
+    background: linear-gradient(45deg, #ffc107, #ff8c00);
+    color: #212529;
+    padding: 10px 15px;
+    border-radius: 6px;
+    margin: 15px 0;
+    border-left: 4px solid #ff8c00;
+    font-weight: 500;
+}
+
+.sandbox-mode-indicator i {
+    margin-right: 8px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .genie-payment-info {
+        padding: 15px;
+    }
+    
+    .card-types {
+        justify-content: center;
+        margin: 15px 0;
+    }
+    
+    .card-types i {
+        font-size: 2rem !important;
+    }
+    
+    .payment-actions {
+        justify-content: center;
+    }
+    
+    .payment-actions .btn {
+        flex: 1;
+        min-width: 120px;
+    }
+    
+    .payment-message-container {
+        width: 95%;
+        top: 10px;
+    }
+    
+    .transaction-status {
+        padding: 15px;
+    }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .method-logo,
+    .genie-logo {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .genie-payment-info {
+        background: #2c3e50;
+        border-color: #34495e;
+        color: #ecf0f1;
+    }
+    
+    .transaction-status {
+        background: #2c3e50;
+        border-color: #34495e;
+        color: #ecf0f1;
+    }
+    
+    .payment-method-genie {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+}
+
+/* Print Styles */
+@media print {
+    .payment-actions,
+    .btn,
+    .payment-message-container {
+        display: none !important;
+    }
+    
+    .transaction-status {
+        box-shadow: none;
+        border: 2px solid #000;
+    }
+    
+    .genie-payment-info {
+        background: white !important;
+        border: 1px solid #000;
+    }
+}
+
+/* Accessibility Improvements */
+.btn:focus,
+.form-control:focus {
+    outline: 2px solid #ff6b35;
+    outline-offset: 2px;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Animation for status updates */
+.status-update-animation {
+    animation: statusPulse 0.5s ease;
+}
+
+@keyframes statusPulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Payment Progress Indicator */
+.payment-progress {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    position: relative;
+}
+
+.payment-progress::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #e9ecef;
+    z-index: 1;
+}
+
+.payment-progress-step {
+    background: white;
+    border: 2px solid #e9ecef;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+    position: relative;
+    z-index: 2;
+}
+
+.payment-progress-step.active {
+    border-color: #ff6b35;
+    background: #ff6b35;
+    color: white;
+}
+
+.payment-progress-step.completed {
+    border-color: #28a745;
+    background: #28a745;
+    color: white;
+}
+
+/* Tooltip Styling */
+.tooltip {
+    font-size: 0.875rem;
+}
+
+.tooltip-inner {
+    background: #2c3e50;
+    border-radius: 6px;
+    padding: 8px 12px;
+}
+
+.tooltip.bs-tooltip-top .tooltip-arrow::before {
+    border-top-color: #2c3e50;
+}
+
+.tooltip.bs-tooltip-bottom .tooltip-arrow::before {
+    border-bottom-color: #2c3e50;
+}
+
+/* Additional Utility Classes */
+.text-genie {
+    color: #ff6b35 !important;
+}
+
+.bg-genie {
+    background-color: #ff6b35 !important;
+}
+
+.border-genie {
+    border-color: #ff6b35 !important;
+}
+
+.btn-genie {
+    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+    border: none;
+    color: white;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-genie:hover {
+    background: linear-gradient(135deg, #e55a2b 0%, #e0841a 100%);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+}
+
+.btn-genie:focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 107, 53, 0.5);
+}
+
+.btn-genie:active {
+    transform: translateY(0);
+}
